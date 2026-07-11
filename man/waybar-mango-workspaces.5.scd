@@ -108,5 +108,6 @@ When the overview button is clicked, the actions change to:
 - *#workspaces button.active* – the workspace is active (visible) on its output.
 - *#workspaces button.urgent* – the workspace has at least one urgent window.
 - *#workspaces button.empty* – the workspace contains no clients.
+- *#workspaces button.occupied* – the workspace contains at least one client but is not active.
 - *#workspaces button.current_output* – the workspace belongs to the output where the bar is shown.
 - *#workspaces button.overview* – the overview button (visible in overview mode).

@@ -149,6 +149,7 @@ void Workspaces::updateButtonState(Gtk::Button& button, const Json::Value& tag,
   bool active = tag["is_active"].asBool();
   bool urgent = tag["is_urgent"].asBool();
   bool empty = (tag["client_count"].asInt() == 0);
+  bool occupied = !empty;
 
   if (active)
     style->add_class("active");
@@ -164,6 +165,11 @@ void Workspaces::updateButtonState(Gtk::Button& button, const Json::Value& tag,
     style->add_class("empty");
   else
     style->remove_class("empty");
+
+  if (occupied)
+    style->add_class("occupied");
+  else
+    style->remove_class("occupied");
 
   if (monitor["active"].asBool())
     style->add_class("current_output");
